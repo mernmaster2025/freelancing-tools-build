@@ -8,7 +8,8 @@ After `.\build\windows\build.ps1` in **Proposal-Generator-Translator**, copy int
 
 - `FreelancingTools-<version>-portable.zip`
 - `installer/FreelancingTools-Setup-<version>.exe`
-- `README.md`, `donate-qrcode.png` (optional, for the repo; not attached by the release action)
+- `README.md`, `donate-qrcode.png`
+- `screens/` (app screenshots shown in the README)
 
 ## 2. Commit and tag
 

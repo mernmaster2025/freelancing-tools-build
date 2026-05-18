@@ -2,8 +2,35 @@
 
 Desktop app for freelance **proposals**, **English ↔ Spanish translation**, **resume builder & PDF export**, and **notes** with attachments.
 
+## Screenshots
+
+### Proposal tab
+
+![Proposal tab](screens/proposal_tab.png)
+
+Generate tailored bids from job descriptions.
+
+### Translator tab
+
+![Translator tab](screens/translator_tab.png)
+
+Translate English ↔ Spanish in both directions.
+
+### Note tab
+
+![Note tab](screens/note_tab.png)
+
+Organize reusable snippets with keys, values, and attachments.
+
+### Resume tab
+
+![Resume tab](screens/resume_tab.png)
+
+Build profiles, generate content with AI, and export PDF.
+
 ## Index
 
+- [Screenshots](#screenshots)
 - [Quick start](#quick-start)
   - [Installer](#installer)
   - [Portable (zip)](#portable-zip)

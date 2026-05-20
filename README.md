@@ -1,51 +1,28 @@
 # Freelancing Tools
 
-Desktop app for freelance **proposals**, **English ↔ Spanish translation**, **resume builder & PDF export**, and **notes** with attachments.
+Desktop app for freelance **proposals**, **translation**, **live speech captions**, **resumes**, and **notes** with attachments.
 
-## Screenshots
+**Tabs (left to right):** Proposal → Translator → Caption → Resume → Note
 
-### Proposal tab
-
-![Proposal tab](screens/proposal_tab.png)
-
-Generate tailored bids from job descriptions.
-
-### Translator tab
-
-![Translator tab](screens/translator_tab.png)
-
-Translate English ↔ Spanish in both directions.
-
-### Note tab
-
-![Note tab](screens/note_tab.png)
-
-Organize reusable snippets with keys, values, and attachments.
-
-### Resume tab
-
-![Resume tab](screens/resume_tab.png)
-
-Build profiles, generate content with AI, and export PDF.
+---
 
 ## Index
 
-- [Screenshots](#screenshots)
 - [Quick start](#quick-start)
   - [Installer](#installer)
   - [Portable (zip)](#portable-zip)
   - [API keys](#api-keys)
-- [License & pricing](#license--pricing)
-  - [Purchase a license](#purchase-a-license)
-  - [How to activate](#how-to-activate)
 - [How to use](#how-to-use)
   - [Proposal tab](#proposal-tab)
   - [Translator tab](#translator-tab)
-  - [Note tab](#note-tab)
+  - [Caption tab](#caption-tab)
   - [Resume tab](#resume-tab)
-  - [Backup](#backup)
+  - [Note tab](#note-tab)
+  - [Data backup](#data-backup)
+- [License & pricing](#license--pricing)
+  - [Purchase a license](#purchase-a-license)
+  - [How to activate](#how-to-activate)
 - [Coming soon](#coming-soon)
-- [Troubleshooting](#troubleshooting)
 - [Support the project (donate)](#support-the-project-donate)
 
 ---
@@ -56,13 +33,15 @@ Build profiles, generate content with AI, and export PDF.
 
 1. Run `installer\FreelancingTools-Setup-*.exe`.
 2. Launch **Freelancing Tools** from the Start menu (optional desktop shortcut).
-3. On first run, **activate a license** or start the **3-day free trial**.
+3. On first run, allow the app to **download the Caption speech model** (~150 MB from Hugging Face; requires internet).
+4. **Activate a license** or start the **3-day free trial**.
 
 ### Portable (zip)
 
 1. Unzip `FreelancingTools-*-portable.zip` to a folder (e.g. `Desktop\FreelancingTools`).
 2. Run **`Freelancing Tools.exe`** inside the `FreelancingTools` folder.
 3. Keep all files in that folder together — do not move only the `.exe`.
+4. On first run, download the **Caption speech model** when prompted (internet required once).
 
 ### API keys
 
@@ -73,6 +52,64 @@ Build profiles, generate content with AI, and export PDF.
 Your data (database, notes, resume profiles, attachments) is stored in:
 
 `%LOCALAPPDATA%\FreelancingTools\`
+
+---
+
+## How to use
+
+### Proposal tab
+
+![Proposal tab](screens/proposal_tab.png)
+
+1. Add a **proposal maker** (+) — your freelancer profile and platform (Upwork, Fiverr, etc.).
+2. Select a maker, paste the **job description**, click **Generate** (play).
+3. Copy or clear the proposal from the output panel.
+4. History is saved locally per maker. Drag the grip on a row to reorder makers.
+
+### Translator tab
+
+![Translator tab](screens/translator_tab.png)
+
+1. Choose source and target language (**English**, **Spanish**, or **Portuguese**).
+2. Paste text, click **Run** for that direction (forward and reverse rows).
+3. Copy the translation from the output panel.
+
+Requires an **Anthropic API key** in Settings.
+
+### Caption tab
+
+![Caption tab](screens/caption_tab.png)
+
+Live captions using **faster-whisper small** (offline on your PC after the model is downloaded once).
+
+1. **Caption history** (left) — **+** adds a session; select one to view its transcript.
+2. **Transcript** (right) — captured lines with time and language tags.
+3. Toolbar: **Clear**, **Copy**, **Copy new** (dimmed lines were already copied), **Delete**, **Start / Continue**.
+4. While listening, the main window hides and only the caption window is shown; click **Stop** to return.
+
+No API key is required. The model downloads on first launch from Hugging Face into `%LOCALAPPDATA%\FreelancingTools\models\`.
+
+### Resume tab
+
+![Resume tab](screens/resume_tab.png)
+
+1. Under **Users**, click **+** to add a profile.
+2. Fill **Profile details** (contact, education, links).
+3. Use **Generate with AI** for headline, skills, summary, and experience (Anthropic key required).
+4. **Preview** the formatted resume; **Save** exports a PDF.
+5. Drag users in the left list to reorder profiles.
+
+### Note tab
+
+![Note tab](screens/note_tab.png)
+
+1. Create **notes** (+) in the left column.
+2. Add **keys** (+) in the middle column; drag to reorder.
+3. Edit **values** on the right — text auto-saves; attach images or files from the toolbar.
+
+### Data backup
+
+In **Settings**, use **Export data** / **Import data** to back up or restore your database, resume profiles, and attachments as a ZIP file.
 
 ---
 
@@ -110,47 +147,6 @@ You will receive your license key by email after the payment is confirmed.
 
 ---
 
-## How to use
-
-### Proposal tab
-
-1. Add a **proposal maker** (+) — your freelancer profile and platform (Upwork, Fiverr, etc.).
-2. Select a maker, paste the **job description**, click **Generate** (play).
-3. Copy or clear the proposal from the output panel.
-4. History is saved locally per maker.
-
-### Translator tab
-
-1. Choose source and target language (English ↔ Spanish).
-2. Paste text, click **Run** for that direction.
-3. Copy the translation from the output panel.
-
-### Note tab
-
-1. Create **notes** (+) in the left column.
-2. Add **keys** (+) in the middle column; drag to reorder.
-3. Edit **values** on the right — text auto-saves; attach images or files from the toolbar.
-
-### Resume tab
-
-Build a modern two-column resume and export a PDF that matches the on-screen preview.
-
-1. Open the **Resume** tab.
-2. Under **Users**, click **+** to add a profile (list name, e.g. a client or your name).
-3. Fill in **Profile details**: name, contact, links, location, and **Education**.
-4. In **Generated content**, optionally click the **play** button to generate **headline**, **skills**, **summary**, and **experience** with AI from a job post or resume brief (uses your Anthropic key and the profile **Location** for realistic employers).
-5. Edit any field manually — changes save automatically.
-6. Click **Preview** to see the formatted resume in a dialog.
-7. Click **Save as…** to export a PDF to your chosen folder.
-
-Drag users in the left list to reorder profiles.
-
-### Backup
-
-In **Settings**, use **Export data** / **Import data** to back up or restore your database, resume profiles, and attachments as a ZIP file.
-
----
-
 ## Coming soon
 
 Planned features:
@@ -158,25 +154,13 @@ Planned features:
 - OpenAI integration (in addition to Anthropic) for proposals, translation, and resume AI
 - More languages in the translator for developers and international clients
 - Additional resume PDF templates and layout styles
-- Multi-language caption detection from voice (live captions across languages)
-
----
-
-## Troubleshooting
-
-| Issue | What to try |
-|-------|-------------|
-| App won’t start | Run from the install or portable folder; allow through antivirus. |
-| License / trial | Enter a valid key for this Device ID, or start the 3-day trial once. |
-| API errors | Check Anthropic key in Settings, billing, and internet connection. |
-| Resume AI | Ensure Anthropic key is set; paste a job description or brief when generating. |
-| PDF export | Use **Save as…** after filling profile fields; try **Preview** first. |
+- More caption languages beyond English and Spanish
 
 ---
 
 ## Support the project (donate)
 
-If Freelancing Tools helps your work, you can send a tip to the same wallet on **any EVM-compatible network** (Ethereum, Polygon, Arbitrum, Base, BNB Chain, and others).
+If Freelancing Tools helps your work, you can send a tip on **any EVM-compatible network** (Ethereum, Polygon, Arbitrum, Base, BNB Chain, and others).
 
 Use the **same address** on whichever chain you prefer. Send native coins (ETH, MATIC, BNB, etc.) or tokens (USDT, USDC, and other ERC-20-style assets on that chain).
 
@@ -186,8 +170,6 @@ Use the **same address** on whichever chain you prefer. Send native coins (ETH, 
 ```
 
 Always double-check the address and network in your wallet before sending.
-
-![Donate — scan QR code (EVM address)](donate-qrcode.png)
 
 
 ---

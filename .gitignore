@@ -1,0 +1,7 @@
+# Release binaries (produced by build\windows\build.ps1)
+installer/
+FreelancingTools*.zip
+*.exe
+
+# Generated per build when evm_address is set in deployment_config.json
+donate-qrcode.png

@@ -9,16 +9,15 @@ After `.\build\windows\build.ps1` in **Proposal-Generator-Translator**, copy int
 - `FreelancingTools-<version>-portable.zip`
 - `installer/FreelancingTools-Setup-<version>.exe`
 - `README.md`, `donate-qrcode.png`
-- `screens/` (app screenshots shown in the README)
 
 ## 2. Commit and tag
 
 ```bash
 git add .
-git commit -m "Release 1.0.0"
-git tag v1.0.0
+git commit -m "Release 2.1.0"
+git tag v2.1.0
 git push origin main
-git push origin v1.0.0
+git push origin v2.1.0
 ```
 
 Pushing the tag runs **Release** and uploads the portable zip and installer to GitHub Releases.

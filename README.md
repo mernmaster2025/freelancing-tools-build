@@ -33,7 +33,7 @@ Desktop app for freelance **proposals**, **translation**, **live speech captions
 
 1. Run `installer\FreelancingTools-Setup-*.exe`.
 2. Launch **Freelancing Tools** from the Start menu (optional desktop shortcut).
-3. On first run, allow the app to **download the Caption speech model** (~150 MB from Hugging Face; requires internet).
+3. For offline captions, open **Settings** and click **Download** next to Caption model (~150 MB from Hugging Face; requires internet once).
 4. **Activate a license** or start the **3-day free trial**.
 
 ### Portable (zip)
@@ -41,12 +41,12 @@ Desktop app for freelance **proposals**, **translation**, **live speech captions
 1. Unzip `FreelancingTools-*-portable.zip` to a folder (e.g. `Desktop\FreelancingTools`).
 2. Run **`Freelancing Tools.exe`** inside the `FreelancingTools` folder.
 3. Keep all files in that folder together — do not move only the `.exe`.
-4. On first run, download the **Caption speech model** when prompted (internet required once).
+4. For offline captions, open **Settings** and download the **Caption speech model** once.
 
 ### API keys
 
 1. Open **Settings** (gear icon in the title bar).
-2. Add your **Anthropic API key** (required for proposals, translation, and resume AI).
+2. Add your **OpenAI API key** and/or **Anthropic API key**. OpenAI is the default for proposals and translation; Anthropic is the default for resume AI.
 3. Click **Save**.
 
 Your data (database, notes, resume profiles, attachments) is stored in:
@@ -59,8 +59,6 @@ Your data (database, notes, resume profiles, attachments) is stored in:
 
 ### Proposal tab
 
-![Proposal tab](screens/proposal_tab.png)
-
 1. Add a **proposal maker** (+) — your freelancer profile and platform (Upwork, Fiverr, etc.).
 2. Select a maker, paste the **job description**, click **Generate** (play).
 3. Copy or clear the proposal from the output panel.
@@ -68,40 +66,32 @@ Your data (database, notes, resume profiles, attachments) is stored in:
 
 ### Translator tab
 
-![Translator tab](screens/translator_tab.png)
-
 1. Choose source and target language (**English**, **Spanish**, or **Portuguese**).
 2. Paste text, click **Run** for that direction (forward and reverse rows).
 3. Copy the translation from the output panel.
 
-Requires an **Anthropic API key** in Settings.
+Requires an **OpenAI** or **Anthropic** API key in Settings.
 
 ### Caption tab
 
-![Caption tab](screens/caption_tab.png)
-
-Live captions using **faster-whisper small** (offline on your PC after the model is downloaded once).
+Live captions using **faster-whisper small** offline, or OpenAI transcription when selected in Settings.
 
 1. **Caption history** (left) — **+** adds a session; select one to view its transcript.
 2. **Transcript** (right) — captured lines with time and language tags.
 3. Toolbar: **Clear**, **Copy**, **Copy new** (dimmed lines were already copied), **Delete**, **Start / Continue**.
 4. While listening, the main window hides and only the caption window is shown; click **Stop** to return.
 
-No API key is required. The model downloads on first launch from Hugging Face into `%LOCALAPPDATA%\FreelancingTools\models\`.
+Offline captions do not require an API key. Download the model from Settings into `%LOCALAPPDATA%\FreelancingTools\models\`.
 
 ### Resume tab
 
-![Resume tab](screens/resume_tab.png)
-
 1. Under **Users**, click **+** to add a profile.
 2. Fill **Profile details** (contact, education, links).
-3. Use **Generate with AI** for headline, skills, summary, and experience (Anthropic key required).
+3. Use **Generate with AI** for headline, skills, summary, and experience.
 4. **Preview** the formatted resume; **Save** exports a PDF.
 5. Drag users in the left list to reorder profiles.
 
 ### Note tab
-
-![Note tab](screens/note_tab.png)
 
 1. Create **notes** (+) in the left column.
 2. Add **keys** (+) in the middle column; drag to reorder.
@@ -118,11 +108,11 @@ In **Settings**, use **Export data** / **Import data** to back up or restore you
 | Plan | Duration | Price | Notes |
 |------|----------|-------|-------|
 | **Free trial** | 3 days | **$0** | One trial per device. Start from the License screen. |
-| **1 month** | 30 days | **$10** |  |
-| **3 months** | 90 days | **$25** | Save $5 vs paying monthly ($30). |
-| **6 months** | 180 days | **$45** | Save $15 vs paying monthly ($60). |
-| **1 year** | 365 days | **$80** | Save $40 vs paying monthly ($120). |
-| **Lifetime** | No expiry | **$149** | Best value — one-time license, all future updates. |
+| **1 month** | 30 days | **$5** |  |
+| **3 months** | 90 days | **$12.50** | Save $2.50 vs paying monthly ($15). |
+| **6 months** | 180 days | **$22.50** | Save $7.50 vs paying monthly ($30). |
+| **1 year** | 365 days | **$40** | Save $20 vs paying monthly ($60). |
+| **Lifetime** | No expiry | **$74.50** | Best value — one-time license, all future updates. |
 
 ### Purchase a license
 
@@ -151,10 +141,9 @@ You will receive your license key by email after the payment is confirmed.
 
 Planned features:
 
-- OpenAI integration (in addition to Anthropic) for proposals, translation, and resume AI
 - More languages in the translator for developers and international clients
 - Additional resume PDF templates and layout styles
-- More caption languages beyond English and Spanish
+- More caption language controls and transcription options
 
 ---
 

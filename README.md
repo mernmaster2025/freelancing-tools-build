@@ -164,7 +164,7 @@ If Freelancing Tools helps your work, you can send a tip on **any EVM-compatible
 
 Use the **same address** on whichever chain you prefer. Send native coins (ETH, MATIC, BNB, etc.) or tokens (USDT, USDC, and other ERC-20-style assets on that chain).
 
-**EVM address:**
+**EVM address:**(screens/donate-qrcode.png)
 ```
 0xc3E55e24e7F4d4539e87205F3b03791e0034fdcE
 ```

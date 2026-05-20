@@ -171,6 +171,8 @@ Use the **same address** on whichever chain you prefer. Send native coins (ETH, 
 
 Always double-check the address and network in your wallet before sending.
 
+![Donate — scan QR code (EVM address)](donate-qrcode.png)
+
 
 ---
 

@@ -14,10 +14,10 @@ After `.\build\windows\build.ps1` in **Proposal-Generator-Translator**, copy int
 
 ```bash
 git add .
-git commit -m "Release 2.1.0"
-git tag v2.1.0
+git commit -m "Release 2.2.0"
+git tag v2.2.0
 git push origin main
-git push origin v2.1.0
+git push origin v2.2.0
 ```
 
 Pushing the tag runs **Release** and uploads the portable zip and installer to GitHub Releases.
